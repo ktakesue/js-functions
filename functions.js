@@ -34,7 +34,7 @@ function decrease(n){
  */
 function add(x, y){
 	result = x + y;
-	return result;
+	return result;	
 }
 
 /**
@@ -88,17 +88,39 @@ function square (x){
  * @param {number} y
  * @return {number} the result
  */
-function calculate(x, y){
+function calculate(operation, x, y){
+	var result = [x + y, x - y, x * y, x / y];	
+		
+		function add(x, y){
+			return x + y;
+		}
+		
+		function subtract(x, y){
+			return x - y;
+		}
 
+		function multiply(x, y){
+			return x * y;
+		}
+
+		function divide(x, y){
+			return x / y;
+		}
+		
+		console.log(x + "+" + y + "=" + result[0]);
+		console.log(x + "-" + y + "=" + result[1]);
+		console.log(x + "*" + y + "=" + result[2]);
+		console.log(x + "/" + y + "=" + result[3]);
 }
-
 /**
  * Returns true if `a` is greater than `b`.
  * @param {number} a
  * @param {number} b
  * @return {boolean} `a` is larger than `b`
  */
-
+ function isGreaterThan(a, b){
+ 	return boolean;
+ }
 
 /**
  * Returns true if `a` is less than `b`.
@@ -106,7 +128,9 @@ function calculate(x, y){
  * @param {number} b
  * @return {boolean} `a` is smaller than `b`
  */
-
+function isLessThan(a, b){
+	return boolean;
+}
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -114,7 +138,9 @@ function calculate(x, y){
  * @param {number} b
  * @return {boolean} the numbers are equal
  */
+function areEqual(a, b){
 
+}
 
 /**
  * Returns the smallest value of two numbers.
@@ -122,7 +148,9 @@ function calculate(x, y){
  * @param {number} y
  * @return {number} the smallest number
  */
+ function minimum(x, y){
 
+ }
 
 /**
  * Returns the largest value of two numbers.
@@ -130,21 +158,27 @@ function calculate(x, y){
  * @param {number} y
  * @return {number} the largest number
  */
+function maximum(x, y){
 
+}
 
 /**
  * Returns true if `n` is even.
  * @param {number} n
  * @return {boolean} the number is even
  */
+function isEven(n){
 
+}
 
 /**
  * Returns true if `n` is odd.
  * @param {number} n
  * @return {boolean} the number is odd
  */
+function isOdd(n){
 
+}
 
 /**
  * Returns a letter grade.
@@ -157,7 +191,9 @@ function calculate(x, y){
  * @param {number} total maximum possible score
  * @return {string} the score represented as a letter grade
  */
+function letterGrade(score, total){
 
+}
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
@@ -166,7 +202,9 @@ function calculate(x, y){
  * @param {object} restaurant   represents a restaurant object
  * @return {object} restaurant
  */
+function incrementReviews(restaurant){
 
+}
 
 /**
  * Joins two strings with a space.
@@ -174,7 +212,9 @@ function calculate(x, y){
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
+function combine(word1, word2){
 
+}
 
 /**
  * Returns a circle object with the properties `circumference` and `area`.
@@ -183,4 +223,6 @@ function calculate(x, y){
  * @param {number} radius
  * @return {object} circle
  */
+function createCircle(radius){
 
+}
