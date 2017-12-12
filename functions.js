@@ -6,6 +6,7 @@
 function numberToString(n){
  	return n.toString();
  }
+
 /**
  * Adds one to a given number.
  * @param {number} n
@@ -95,8 +96,6 @@ function square (x){
  */
 function calculate(operation, x, y){
 
-		result = undefined; 
-		
 		if (operation == "add"){
 			result = x + y;
 				console.log(x + " + " + y + " = " + result);
@@ -241,7 +240,8 @@ function isOdd(n){
  * @return {string} the score represented as a letter grade
  */
 function letterGrade(score, total){
-	var percentage = (score / total * 100);
+	
+	percentage = (score / total * 100);
 		if (percentage >= 90){
 			return "A";
 		}
@@ -267,9 +267,17 @@ function letterGrade(score, total){
  * @return {object} restaurant
  */
 function incrementReviews(restaurant){
-	var awesomeEatery = incrementReviews;
-}
 
+	if (restaurant.hasOwnProperty("reviews")){
+		restaurant.reviews++;
+		return restaurant;
+	}
+	else {
+		restaurant.reviews = 1;
+		return restaurant;
+	}
+}
+	
 /**
  * Joins two strings with a space.
  * @param {string} word1
@@ -290,5 +298,8 @@ function combine(word1, word2){
  * @return {object} circle
  */
 function createCircle(radius){
-
+  	circle = {};
+	circle.circumference = (2 * Math.PI * radius);
+	circle.area = (Math.PI * radius * radius);
+		return circle;
 }
