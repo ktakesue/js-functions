@@ -32,9 +32,10 @@ function decrease(n){
  * @param {number} y
  * @return {number} the sum
  */
-function add(x, y){
-	result = x + y;
-	return result;	
+function add(x, y){ 
+	return x + y;
+	// result = x + y;
+	// return result;
 }
 
 /**
@@ -44,21 +45,23 @@ function add(x, y){
  * @return {number} the difference
  */
 function subtract(x, y){
-	result = x - y;
-	return result;
+	return  x - y;
+	// result = x - y;
+	// return result;
 }
-
+	
 /**
  * Multiplies two numbers.
  * @param {number} x
  * @param {number} y
  * @return {number} the product
  */
-function multiply(x, y){
-	result = x * y;
-	return result;
+function multiply(x, y){ 
+	return x * y;
+	// result = x * y;
+	// return result;
 }
-
+	
 /**
  * Divides the first number by the second.
  * @param {number} x
@@ -66,8 +69,9 @@ function multiply(x, y){
  * @return {number} the quotient
  */
 function divide(x, y){
-	result = x / y;
-	return result;
+	return x / y;
+	// result = x / y;
+	// return result;
 }
 
 /**
@@ -76,8 +80,9 @@ function divide(x, y){
  * @return {number} squared
  */
 function square (x){
-	result = x * x;
-	return result;
+	return x * x;
+	// result = x * x;
+	// return result;
 }
 
 /**
@@ -89,29 +94,33 @@ function square (x){
  * @return {number} the result
  */
 function calculate(operation, x, y){
-	var result = [x + y, x - y, x * y, x / y];	
+
+		result = undefined; 
 		
-		function add(x, y){
-			return x + y;
-		}
-		
-		function subtract(x, y){
-			return x - y;
+		if (operation == "add"){
+			result = x + y;
+				console.log(x + " + " + y + " = " + result);
+			return result;	
 		}
 
-		function multiply(x, y){
-			return x * y;
+		if (operation == "subtract"){
+			result = x - y;	
+				console.log(x + " - " + y + " = " + result);
+			return result;
 		}
 
-		function divide(x, y){
-			return x / y;
+		if (operation == "multiply"){
+			result = x * y;
+				console.log(x + " * " + y + " = " + result);
+			return result;
 		}
-		
-		console.log(x + "+" + y + "=" + result[0]);
-		console.log(x + "-" + y + "=" + result[1]);
-		console.log(x + "*" + y + "=" + result[2]);
-		console.log(x + "/" + y + "=" + result[3]);
-}
+
+		if (operation == "divide"){
+			result = x / y;
+				console.log(x + " / " + y + " = " + result);
+			return result;
+		}
+	}		
 /**
  * Returns true if `a` is greater than `b`.
  * @param {number} a
@@ -119,9 +128,15 @@ function calculate(operation, x, y){
  * @return {boolean} `a` is larger than `b`
  */
  function isGreaterThan(a, b){
- 	return boolean;
- }
-
+	return a > b;
+ 	// if (a > b){
+ 	//	return true;	
+ 	// }
+ 	// else {
+ 	//  return false;	
+ 	// }
+}
+ 	
 /**
  * Returns true if `a` is less than `b`.
  * @param {number} a
@@ -129,7 +144,13 @@ function calculate(operation, x, y){
  * @return {boolean} `a` is smaller than `b`
  */
 function isLessThan(a, b){
-	return boolean;
+	return a < b;
+	// if (a < b){
+	//   return true;	
+	// }
+	// else {
+	// 	return false;
+	// }
 }
 
 /**
@@ -139,7 +160,13 @@ function isLessThan(a, b){
  * @return {boolean} the numbers are equal
  */
 function areEqual(a, b){
-
+	return a === b;
+	// if (a === b){
+	// 	return true;
+	// }
+	// else {
+	// 	return false;
+	// }
 }
 
 /**
@@ -149,7 +176,12 @@ function areEqual(a, b){
  * @return {number} the smallest number
  */
  function minimum(x, y){
-
+ 	if (x < y){
+ 		return x;
+ 	}
+ 	else {
+ 		return y;
+ 	}
  }
 
 /**
@@ -159,7 +191,12 @@ function areEqual(a, b){
  * @return {number} the largest number
  */
 function maximum(x, y){
-
+	if (x > y){
+ 		return x;
+ 	}
+ 	else {
+ 		return y;
+ 	}
 }
 
 /**
@@ -168,7 +205,13 @@ function maximum(x, y){
  * @return {boolean} the number is even
  */
 function isEven(n){
-
+	return n % 2 === 0;
+	// if (n%2 === 0){
+	// 	return true;
+	// }
+	// else {	
+	// 	return false;
+	// }
 }
 
 /**
@@ -177,7 +220,13 @@ function isEven(n){
  * @return {boolean} the number is odd
  */
 function isOdd(n){
-
+	return n % 2 !== 0;	
+	// if (n%2 !== 0){
+	// 	return true;
+	// }
+	// else {
+	//  return false;
+	// }
 }
 
 /**
@@ -192,7 +241,22 @@ function isOdd(n){
  * @return {string} the score represented as a letter grade
  */
 function letterGrade(score, total){
-
+	var percentage = (score / total * 100);
+		if (percentage >= 90){
+			return "A";
+		}
+		else if (percentage >= 80 && percentage < 90){
+			return "B";
+		}
+		else if (percentage >= 70 && percentage < 80){
+			return "C";
+		}
+		else if (percentage >= 60 && percentage < 70){
+			return "D";
+		}
+		else {
+			return "F";
+		}
 }
 
 /**
@@ -203,7 +267,7 @@ function letterGrade(score, total){
  * @return {object} restaurant
  */
 function incrementReviews(restaurant){
-
+	var awesomeEatery = incrementReviews;
 }
 
 /**
@@ -213,7 +277,9 @@ function incrementReviews(restaurant){
  * @return {string} joined the words joined with a space
  */
 function combine(word1, word2){
-
+		return word1 + " " + word2;
+		// result = word1 + " " + word2;
+		// return result;
 }
 
 /**
